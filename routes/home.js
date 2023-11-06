@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose')
-const Message = require('../messageModel')
-const dbConnection = require('../dbConnection')
+const Message = require('../db/messageModel')
+const dbConnection = require('../db/dbConnection')
 
 
 router.get('/', async (req, res) => {

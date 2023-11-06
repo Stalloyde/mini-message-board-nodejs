@@ -6,7 +6,7 @@ const logger = require('morgan');
 const homeRouter = require('./routes/home');
 const newMessageRouter = require('./routes/newMessage');
 const port = 3000;
-const Message = require('./messageModel')
+const Message = require('./db/messageModel')
 
 
 
