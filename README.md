@@ -1,1 +1,1 @@
-# mini-message-board-nodejs
+# mini-message-board

@@ -1,0 +1,25 @@
+extends layout
+
+block addNewMessage 
+    div.message-container
+        h2 #{subtitle}
+        form(action="/newMessage" method="POST")
+            div.name-input
+                div
+                    label(for="name") Name:
+                    input#name(type="text", name='name')
+            div.message-input
+                div
+                    label(for="message") Message: 
+                    textarea#message(name='message')
+            div.button-container
+                button(type="submit") Send
+                a(href='/') 
+                    button(type='button') Cancel
+
+block content
+   div.message-board
+        for item in messages.reverse()
+            div(class='message-container', id=messages.indexOf(item))
+                p #{item.text}
+                p.details #{item.user} on #{item.added}

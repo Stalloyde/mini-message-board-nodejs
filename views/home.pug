@@ -1,0 +1,11 @@
+extends layout
+
+block content
+   div.message-board
+        div.button-container
+            a(href='/newMessage') 
+                button Add Message
+        for item in messages.reverse()
+            div(class='message-container', id=messages.indexOf(item))
+                p #{item.text}
+                p.details #{item.user} on #{item.added}
